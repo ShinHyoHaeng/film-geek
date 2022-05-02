@@ -1,12 +1,13 @@
 @charset "UTF-8";
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /* common */ 
+*{transition: 0.3s;}
 html, body {margin: 0; padding: 0; height: 100%;}
 html {position: relative;}
-body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans KR', sans-serif;}
+body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans KR', sans-serif; color:#0b0b0b; font-weight: 400;}
 .wrapper{ min-height: 100%; position: relative; padding-bottom:56px;}
-.pd{padding:5em 0;}
 
 /* 텍스트 정렬 시 추가 */
 .align-left{text-align:left;}
@@ -40,8 +41,6 @@ body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans
   -o-animation: fadeIn 0.5s 1; /* Opera 12+ */
   animation: fadeIn 0.5s 1; /* IE 10+, Fx 29+ */
 }
-
-
 
 .move-up{
     opacity:1;
@@ -150,7 +149,7 @@ body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans
     }
 }
 
-/* .move-up {
+.move-up {
     opacity: 0;
     -ms-transform: translateY(50px);
     -webkit-transform: translateY(50px);
@@ -165,8 +164,7 @@ body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition-duration: .75s;
-} */
-
+} 
 
 .show-effect {
     opacity: 0;
@@ -193,12 +191,62 @@ body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans
     transform: translate3d(0px, 0px, 0px);
 }
 
+ul{padding-left:0; margin:0;}
+li{list-style: none;}
+a{text-decoration: none;}
+
 .skip{display: none;}
 
 /* header */
-.header{position:fixed; top:0; left:0; bottom:0; width:20%; height: 100%;}
+.header{position:fixed; top:0; left:0; bottom:0; width:20%; height: 100%; padding: 1.5rem 0; border-right: 1px solid #e7e7e7; display: flex; justify-content: space-between; flex-direction: column;}
+.header h1{font-size:2rem; letter-spacing: -1px; padding:0 3rem; font-family: 'Bebas Neue', cursive;}
+.header nav{padding-left:3rem;}
+.header nav .userMenu{margin-top: 4.5rem;}
+.header nav h2.smTitle{font-size: 1rem; color: #ccc;}
+.header nav li{margin:1rem 0;}
+.header nav li a{display:block; color: #cdcdcd; font-size: 1.5rem; font-weight: 700;}
+.header nav li a:hover{position:relative; color:#0b0b0b; border-right:5px solid #0b0b0b;}
+.header footer{padding:0 3rem; color: #777;}
 
 /* contents */
-.contents{margin-left:20%; padding:5em;}
-.afterSignIn .profileImgWrap{width:60px; height:60px; border-radius: 50%; overflow: hidden;}
+.contents{margin-left:20%;}
+
+.topMenu{position: fixed; top:0; left:20%; right:0; z-index:999; background:#fff; padding: 1.5rem 3rem; display:flex; justify-content:flex-end; box-sizing: border-box;  align-items: center;}
+.topMenu .searchArea{width: 25%; position:relative;}
+.topMenu .searchArea input{padding:0.5rem 0.75rem; border: 1px solid #0b0b0b; font-size: 0.75rem; width:100%;}
+.topMenu .searchArea label{position:absolute; right: 0.75rem; top: 0.35rem;}
+.topMenu .etcMenu ul{display: flex; justify-content: flex-end; align-items: center;}
+.topMenu .etcMenu li{margin-left:1rem;}
+.topMenu .etcMenu li button{color: #333; font-size:0.75rem; border:1px solid #bbb; padding:0.5rem 0.75rem; background: none;}
+
+.afterSignIn .profileImgWrap{width:40px; height:40px; border-radius: 50%; overflow: hidden;}
 .afterSignIn .profileImgWrap img{width:100%; height:100%; object-fit:cover;}
+
+.contentsArea{margin-top:80px; padding:1.5rem 3rem; box-sizing: border-box;}
+.contentsArea .tab{display: flex; justify-content: flex-start; margin-bottom:1.5rem;}
+.contentsArea .tab li a{display: inline-block; color: #cdcdcd; font-size: 1.25rem; margin-right: 1.5rem; font-weight: 700;}
+.contentsArea .tab li.on a{color:#0b0b0b;}
+
+.contentsArea .featured{position: relative;}
+.contentsArea .featured .dimArea{position:absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.3);}
+.contentsArea .featured img{width:100%; height: 450px; object-fit: cover;}
+.contentsArea .featured .txtWrap{position:absolute; left: 3rem; bottom: 3rem; color: #fff; z-index:2;}
+.contentsArea .featured h4.featuredTitle{font-weight:900; font-size: 2.5rem;}
+.contentsArea .featured p.featuredSummary{margin-bottom:2rem;}
+.contentsArea .featured .buttonArea{display: flex; justify-items: center; justify-content: flex-start; margin-top:1rem; box-sizing: border-box;}
+.contentsArea .featured .buttonArea li{margin-right: 1em;}
+.contentsArea .featured .buttonArea li a{display: block; padding: 0.5rem 1.5rem; border:1px solid rgba(255,255,255,0.7); color:#fff; }
+
+.contentsArea .list{margin-top: 4.5rem;}
+.contentsArea .list .txtArea{display: flex; justify-content:space-between; align-items: center; margin-bottom: 0.75rem;}
+.contentsArea .list .txtArea h3{font-size:1.5rem; font-weight: 700;}
+.contentsArea .list .txtArea a{display: inline-block; color:#0b0b0b; font-size:1rem;}
+.contentsArea .list .txtArea a i{color:#0b0b0b;}
+
+.contentsArea .list .listArea{display: flex; justify-content: space-between; align-content: stretch; flex-wrap: wrap; padding-left:0;}
+.contentsArea .list .listArea li{width:23%; flex-basis: 23%; display: flex; flex-direction: column; border:1px solid #e7e7e7;}
+.contentsArea .list .listArea li img{flex: auto; width:100%; height: auto; object-fit: cover;}
+.contentsArea .list .listArea li a{color:#0b0b0b}
+.contentsArea .list .listArea li .desc{padding:1.5rem;}
+.contentsArea .list .listArea li .desc h4{font-weight: 700; font-size: 1.25rem;}
+.contentsArea .list .listArea li .desc p{margin:0; padding:0; font-size: 1rem;}
