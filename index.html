@@ -8,13 +8,12 @@
     <!-- css -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="resources/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
-    <link href="resources/css/fontawesome_all.css" rel="stylesheet" type="text/css">
     <link href="resources/css/common.css" rel="stylesheet" type="text/css">
     <link href="resources/css/list.css" rel="stylesheet" type="text/css">
     
     <!-- js -->
-    <script src="resources/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
+    <script src="resources/js/bootstrap.bundle.min.js"></script>
     
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,19 +21,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 
+    <link href="resources/css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="resources/css/brands.css" rel="stylesheet" type="text/css">
+    <link href="resources/css/solid.css" rel="stylesheet" type="text/css">
+    
     <title>Film Geek</title>
 </head>
 <body>
     <div class="header">
         <header>
-            <h1>LOGO</h1>
+            <h1><i class="fa-solid fa-film"></i> FILM GEEK</h1>
         </header>
         <nav>
-            <ul>
-                <li><h2><a href="#">GENRE</a></h2></li>
-                <li><h2><a href="#">NEW & HOT</a></h2></li>
-                <li><h2><a href="#">COLLECTIONS</a></h2></li>
-            </ul>
+            <div class="globalMenu">
+                <h2 class="smTitle">MENU</h2>
+                <ul>
+                    <li><a href="#">GENRE</a></li>
+                    <li><a href="#">NEW & HOT</a></li>
+                    <li><a href="#">COLLECTIONS</a></li>
+                </ul>
+            </div>
+            <div class="userMenu">
+                <h2 class="smTitle">USER</h2>
+                <ul>
+                    <li><a href="#">SIGN IN</a></li>
+                    <li><a href="#">SIGN UP</a></li>
+                </ul>
+                <!-- <ul>
+                    <li><h3><a href="#">MY LIST</a></h3></li>
+                    <li><h3><a href="#">SETTINGS</a></h3></li>
+                    <li><h3><a href="#">LOGOUT</a></h3></li>
+                </ul> -->
+            </div>
         </nav>
         <footer>
             &copy; Hyohaeng.shin
@@ -42,91 +60,129 @@
     </div>
     <section class="contents">
         <h2 class="skip">본문 영역</h2>
-        <article>
+        <article class="topMenu">
             <!-- 검색/로그인/프로필 -->
             <div class="searchArea">
                 <input type="text" placeholder="search..." name="search" id="search">
-                <label for="search"><!-- 검색 아이콘 --></label>
+                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
             </div>
-            <div class="user">
-                <!-- 로그인 전 -->
-                <ul class="beforeSignIn">
-                    <li><a href="#">Sign In</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-                <ul class="afterSignIn">
-                    <li>
-                        <a href="#">
-                            <span>user name</span>
-                            <div class="profileImgWrap">
-                                <img src="https://source.unsplash.com/random" alt="user name">
-                            </div>
-                        </a>
-                        <ul class="userMenu">
-                            <li><a href="#">회원정보 변경</a></li>
-                            <li><a href="#">나의 리스트</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Logout</a></li>
+            <div class="etcMenu">
+                <ul>
+                    <li><button><i class="fa-solid fa-globe"></i> <span>ENGLISH</span></button></li>
+                    <li><button><i class="fa-solid fa-sun"></i> <span>LIGHT</span></button></li>
+                    <!-- <li><button><i class="fa-solid fa-moon"></i><span class="skip">Light Mode</span></button></li> -->
                 </ul>
             </div>
         </article>
-        <article>
+        <article class="contentsArea">
             <!-- 컨텐츠 영역 -->
             <ul class="tab">
-                <li><a href="#">Movies</a></li>
+                <li class="on"><a href="#">Movies</a></li>
                 <li><a href="#">TV Shows</a></li>
             </ul>
-            <div class="featured">
-                <img src="" alt="">
-                <p class="featuredTitle">featured title</p>
-                <p class="featuredSummary">featured summary</p>
-                <ul class="buttonArea">
-                    <li><a href="#">PLAY</a></li>
-                    <li><a href="#">INFO</a></li>
-                </ul>
+            <div class="featured moveUp">
+                <div class="dimArea"></div>
+                <img src="https://source.unsplash.com/random">
+                <div class="txtWrap">
+                    <h3 class="skip">Popular</h3>
+                    <h4 class="featuredTitle">featured title</h4>
+                    <p class="featuredSummary">featured summary</p>
+                    <ul class="buttonArea">
+                        <li><a href="#">PLAY</a></li>
+                        <li><a href="#">INFO</a></li>
+                    </ul>
+                </div>
             </div>
 
             <!-- 슬라이드로 할 지 고정갯수로 할 지 선택 -->
-            <div class="list">
+            <div class="list moveUp">
                 <div class="txtArea">
                     <h3>list title</h3>
-                    <a href="#">MORE</a>
+                    <a href="#">MORE <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <ul>
+                <ul class="listArea">
                     <li>
                         <a href="#">
                             <img src="https://source.unsplash.com/random">
-                            <h4>title</h4>
-                            <p>description</p>
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="https://source.unsplash.com/random">
-                            <h4>title</h4>
-                            <p>description</p>
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="https://source.unsplash.com/random">
-                            <h4>title</h4>
-                            <p>description</p>
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="https://source.unsplash.com/random">
-                            <h4>title</h4>
-                            <p>description</p>
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
-        </article>
-        <article>
-
+            <div class="list moveUp">
+                <div class="txtArea">
+                    <h3>list title</h3>
+                    <a href="#">MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <ul class="listArea">
+                    <li>
+                        <a href="#">
+                            <img src="https://source.unsplash.com/random">
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://source.unsplash.com/random">
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://source.unsplash.com/random">
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://source.unsplash.com/random">
+                            <div class="skip desc">
+                                <h4>title</h4>
+                                <p>description</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </article>
     </section>
 </body>
