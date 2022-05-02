@@ -248,8 +248,20 @@ a{text-decoration: none;}
 .contentsArea .list .listArea li .desc h4{font-weight: 700; font-size: 1.25rem;}
 .contentsArea .list .listArea li .desc p{margin:0; padding:0; font-size: 1rem;}
 
-.contentsArea .detail ul{display: flex; justify-content:space-between; align-items: center; text-align: center; }
-.contentsArea .detail ul li{display: flex; flex-direction: column; }
-.contentsArea .detail ul li a{display: inline-block;}
-.contentsArea .detail .castsList .imgWrap{width:90px; height:90px; border-radius: 50%; overflow: hidden; margin:0 auto;}
-.contentsArea .detail .castsList .imgWrap img{width:100%; height:100%; object-fit: cover;}
+/* detail page */
+.detailArea .featured h3{font-size: 2rem; margin-bottom: 1.5rem; }
+.detailArea .featured .realeseYear{display: inline-block; margin-left:10px; color: #888;}
+
+.detailArea .filmInfo{margin-top:1.5rem; display: flex; flex-wrap: wrap;}
+.detailArea .filmInfo > div{display: flex; align-items: center; margin-bottom: 1rem; width: 50%;}
+.detailArea .filmInfo > div.noFlex{width:100%; display:block; margin-bottom: 1.25rem;}
+.detailArea .filmInfo h4{font-size: 1rem; margin-right: 15px;}
+.detailArea .filmInfo .titleWrap{width:100%; margin-bottom: 1rem;}
+.detailArea .filmInfo .titleWrap{display: flex; justify-content: space-between; align-items: center;}
+.detailArea .filmInfo p{margin-bottom:0;}
+.detailArea .filmInfo ul{display: flex; justify-content:space-between; align-items: center; text-align: center; }
+.detailArea .filmInfo ul li{display: flex; flex-direction: column; }
+.detailArea .filmInfo ul li a{display: inline-block;}
+.detailArea .filmInfo .castsList .imgWrap{width:90px; height:90px; border-radius: 50%; overflow: hidden; margin:0 auto;}
+.detailArea .filmInfo .castsList .imgWrap img{width:100%; height:100%; object-fit: cover;}
+
