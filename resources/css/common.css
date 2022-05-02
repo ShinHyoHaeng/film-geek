@@ -219,9 +219,6 @@ a{text-decoration: none;}
 .topMenu .etcMenu li{margin-left:1rem;}
 .topMenu .etcMenu li button{color: #333; font-size:0.75rem; border:1px solid #bbb; padding:0.5rem 0.75rem; background: none;}
 
-.afterSignIn .profileImgWrap{width:40px; height:40px; border-radius: 50%; overflow: hidden;}
-.afterSignIn .profileImgWrap img{width:100%; height:100%; object-fit:cover;}
-
 .contentsArea{margin-top:80px; padding:1.5rem 3rem; box-sizing: border-box;}
 .contentsArea .tab{display: flex; justify-content: flex-start; margin-bottom:1.5rem;}
 .contentsArea .tab li a{display: inline-block; color: #cdcdcd; font-size: 1.25rem; margin-right: 1.5rem; font-weight: 700;}
@@ -250,3 +247,9 @@ a{text-decoration: none;}
 .contentsArea .list .listArea li .desc{padding:1.5rem;}
 .contentsArea .list .listArea li .desc h4{font-weight: 700; font-size: 1.25rem;}
 .contentsArea .list .listArea li .desc p{margin:0; padding:0; font-size: 1rem;}
+
+.contentsArea .detail ul{display: flex; justify-content:space-between; align-items: center; text-align: center; }
+.contentsArea .detail ul li{display: flex; flex-direction: column; }
+.contentsArea .detail ul li a{display: inline-block;}
+.contentsArea .detail .castsList .imgWrap{width:90px; height:90px; border-radius: 50%; overflow: hidden; margin:0 auto;}
+.contentsArea .detail .castsList .imgWrap img{width:100%; height:100%; object-fit: cover;}
