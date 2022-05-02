@@ -9,8 +9,8 @@
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="resources/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
     <link href="resources/css/fontawesome_all.css" rel="stylesheet" type="text/css">
-    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
-    <link href="resources/css/animation.css" rel="stylesheet" type="text/css">
+    <link href="resources/css/common.css" rel="stylesheet" type="text/css">
+    <link href="resources/css/list.css" rel="stylesheet" type="text/css">
     
     <!-- js -->
     <script src="resources/js/bootstrap.bundle.min.js"></script>
@@ -25,19 +25,51 @@
     <title>Film Geek</title>
 </head>
 <body>
-    <header>
-        <h1>LOGO</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><h2><a href="#">GENRE</a></h2></li>
-            <li><h2><a href="#">NEW & HOT</a></h2></li>
-            <li><h2><a href="#">COLLECTIONS</a></h2></li>
-        </ul>
-    </nav>
-    <section>
+    <div class="header">
+        <header>
+            <h1>LOGO</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><h2><a href="#">GENRE</a></h2></li>
+                <li><h2><a href="#">NEW & HOT</a></h2></li>
+                <li><h2><a href="#">COLLECTIONS</a></h2></li>
+            </ul>
+        </nav>
+        <footer>
+            &copy; Hyohaeng.shin
+        </footer>
+    </div>
+    <section class="contents">
+        <h2 class="skip">본문 영역</h2>
         <article>
             <!-- 검색/로그인/프로필 -->
+            <div class="searchArea">
+                <input type="text" placeholder="search..." name="search" id="search">
+                <label for="search"><!-- 검색 아이콘 --></label>
+            </div>
+            <div class="user">
+                <!-- 로그인 전 -->
+                <ul class="beforeSignIn">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+                <ul class="afterSignIn">
+                    <li>
+                        <a href="#">
+                            <span>user name</span>
+                            <div class="profileImgWrap">
+                                <img src="https://source.unsplash.com/random" alt="user name">
+                            </div>
+                        </a>
+                        <ul class="userMenu">
+                            <li><a href="#">회원정보 변경</a></li>
+                            <li><a href="#">나의 리스트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
         </article>
         <article>
             <!-- 컨텐츠 영역 -->
@@ -64,28 +96,28 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="" alt="">
+                            <img src="https://source.unsplash.com/random">
                             <h4>title</h4>
                             <p>description</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="" alt="">
+                            <img src="https://source.unsplash.com/random">
                             <h4>title</h4>
                             <p>description</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="" alt="">
+                            <img src="https://source.unsplash.com/random">
                             <h4>title</h4>
                             <p>description</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="" alt="">
+                            <img src="https://source.unsplash.com/random">
                             <h4>title</h4>
                             <p>description</p>
                         </a>
@@ -97,8 +129,5 @@
 
         </article>
     </section>
-    <footer>
-
-    </footer>
 </body>
 </html>

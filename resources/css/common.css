@@ -1,8 +1,19 @@
 @charset "UTF-8";
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
+/* common */ 
+html, body {margin: 0; padding: 0; height: 100%;}
+html {position: relative;}
+body{position:relative; z-index:1; font-family: 'Spoqa Han Sans Neo', 'Noto Sans KR', sans-serif;}
+.wrapper{ min-height: 100%; position: relative; padding-bottom:56px;}
+.pd{padding:5em 0;}
+
+/* 텍스트 정렬 시 추가 */
+.align-left{text-align:left;}
+.align-center{text-align:center;}
+.align-right{text-align:right;}
 
 /* interaction */
-
 @-webkit-keyframes fadeIn {
   0%   { opacity: 0; } /* 0%는 from 사용 가능 */
   100% { opacity: 1; } /* 100%는 to 사용 가능 */
@@ -182,3 +193,12 @@
     transform: translate3d(0px, 0px, 0px);
 }
 
+.skip{display: none;}
+
+/* header */
+.header{position:fixed; top:0; left:0; bottom:0; width:20%; height: 100%;}
+
+/* contents */
+.contents{margin-left:20%; padding:5em;}
+.afterSignIn .profileImgWrap{width:60px; height:60px; border-radius: 50%; overflow: hidden;}
+.afterSignIn .profileImgWrap img{width:100%; height:100%; object-fit:cover;}
