@@ -13,7 +13,8 @@
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
     <script src="resources/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="resources/js/common.js"></script>
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,26 +62,41 @@
         <h2 class="skip">본문 영역</h2>
         <article class="topMenu">
             <!-- 검색/로그인/프로필 -->
-            <div class="searchArea">
-                <input type="text" placeholder="search..." name="search" id="search">
-                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <div class="flexLeft goBack">
+                <button><i class="fa-solid fa-arrow-left"></i></button>
             </div>
-            <div class="etcMenu">
-                <ul>
-                    <li><button><i class="fa-solid fa-globe"></i> <span>ENGLISH</span></button></li>
-                    <li><button><i class="fa-solid fa-sun"></i> <span>LIGHT</span></button></li>
-                    <!-- <li><button><i class="fa-solid fa-moon"></i><span class="skip">Light Mode</span></button></li> -->
-                </ul>
+            <div class="flexRight">
+                <div class="searchArea">
+                    <input type="text" placeholder="search..." name="search" id="search">
+                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </div>
+                <div class="etcMenu">
+                    <ul>
+                        <li><button><i class="fa-solid fa-globe"></i> <span>ENGLISH</span></button></li>
+                        <li><button><i class="fa-solid fa-sun"></i> <span>LIGHT</span></button></li>
+                        <!-- <li><button><i class="fa-solid fa-moon"></i><span class="skip">Light Mode</span></button></li> -->
+                    </ul>
+                </div>
             </div>
         </article>
-        <article class="detailArea contentsArea">
+        <article class="castArea contentsArea">
             <!-- 컨텐츠 영역 -->
-            
-
+            <div class="castInfo">
+                <div class="imgWrap">
+                    <img src="https://source.unsplash.com/random" alt="actor name">
+                </div>
+                <div class="textArea">
+                    <h2>cast name</h2>
+                    <div class="profile">
+                        <h3>profile</h3>
+                        <p>description</p>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="list moveUp">
                 <div class="txtArea">
-                    <h3>Similar to</h3>
-                    <a href="#">MORE <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3>Filmography</h3>
                 </div>
                 <ul class="listArea">
                     <li>

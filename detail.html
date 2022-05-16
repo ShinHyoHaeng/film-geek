@@ -13,7 +13,8 @@
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
     <script src="resources/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="resources/js/common.js"></script>
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,16 +62,21 @@
         <h2 class="skip">본문 영역</h2>
         <article class="topMenu">
             <!-- 검색/로그인/프로필 -->
-            <div class="searchArea">
-                <input type="text" placeholder="search..." name="search" id="search">
-                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <div class="flexLeft goBack">
+                <button><i class="fa-solid fa-arrow-left"></i></button>
             </div>
-            <div class="etcMenu">
-                <ul>
-                    <li><button><i class="fa-solid fa-globe"></i> <span>ENGLISH</span></button></li>
-                    <li><button><i class="fa-solid fa-sun"></i> <span>LIGHT</span></button></li>
-                    <!-- <li><button><i class="fa-solid fa-moon"></i><span class="skip">Light Mode</span></button></li> -->
-                </ul>
+            <div class="flexRight">
+                <div class="searchArea">
+                    <input type="text" placeholder="search..." name="search" id="search">
+                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </div>
+                <div class="etcMenu">
+                    <ul>
+                        <li><button><i class="fa-solid fa-globe"></i> <span>ENGLISH</span></button></li>
+                        <li><button><i class="fa-solid fa-sun"></i> <span>LIGHT</span></button></li>
+                        <!-- <li><button><i class="fa-solid fa-moon"></i><span class="skip">Light Mode</span></button></li> -->
+                    </ul>
+                </div>
             </div>
         </article>
         <article class="detailArea contentsArea">
@@ -78,15 +84,13 @@
             
             <div class="featured moveUp">
                 <h3>title<span class="realeseYear">(2022)</span></h3>
+                <h4 class="skip">Summary</h4>
+                <p>Summary description</p>
                 <img src="https://source.unsplash.com/random">
             </div>
 
             <!-- 상세 페이지 내용 -->
             <div class="filmInfo">
-                <div class="noFlex">
-                    <h4 class="skip">Summary</h4>
-                    <p>description</p>
-                </div>
                 <div>
                     <h4 class="">Genre</h4>
                     <p>description</p>
@@ -114,8 +118,8 @@
                 <div class="noFlex">
                     <div class="titleWrap">
                         <h4 class="">Casts</h4>
-                        <a href="" class="allCasts">All Casts</a>
                     </div>
+                    <!-- 슬라이더 삽입 예정 -->
                     <ul class="castsList">
                         <li>
                             <a href="cast.html">
@@ -196,7 +200,7 @@
             <div class="list moveUp">
                 <div class="txtArea">
                     <h3>Similar to</h3>
-                    <a href="#">MORE <i class="fa-solid fa-arrow-right"></i></a>
+                    <!-- <a href="#">MORE <i class="fa-solid fa-arrow-right"></i></a> -->
                 </div>
                 <ul class="listArea">
                     <li>

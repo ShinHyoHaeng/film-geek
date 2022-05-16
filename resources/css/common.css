@@ -211,20 +211,27 @@ a{text-decoration: none;}
 /* contents */
 .contents{margin-left:20%;}
 
-.topMenu{position: fixed; top:0; left:20%; right:0; z-index:999; background:#fff; padding: 1.5rem 3rem; display:flex; justify-content:flex-end; box-sizing: border-box;  align-items: center;}
+.topMenu{position: fixed; top:0; left:20%; right:0; z-index:999; background:#fff; padding: 1.5rem 3rem; display:flex; justify-content:space-between; box-sizing: border-box;  align-items: center;}
+.topMenu .flexRight{display: flex; justify-content: flex-end; width: 75%;}
+.topMenu .goBack button{background:none; border:0; font-size: 1.25rem;}
+.topMenu .goBack button:hover{-ms-transform: translateX(-10px); -webkit-transform: translateX(-10px); transform: translateX(-10px); transition: opacity .3s ease-out, -webkit-transform .3s ease-in-out; transition: opacity .3s ease-out, transform .3s ease-in-out;}
 .topMenu .searchArea{width: 25%; position:relative;}
 .topMenu .searchArea input{padding:0.5rem 0.75rem; border: 1px solid #0b0b0b; font-size: 0.75rem; width:100%;}
 .topMenu .searchArea label{position:absolute; right: 0.75rem; top: 0.35rem;}
+.topMenu .flexRight .searchArea{width: 10%; position:relative;}
 .topMenu .etcMenu ul{display: flex; justify-content: flex-end; align-items: center;}
 .topMenu .etcMenu li{margin-left:1rem;}
 .topMenu .etcMenu li button{color: #333; font-size:0.75rem; border:1px solid #bbb; padding:0.5rem 0.75rem; background: none;}
 
 .contentsArea{margin-top:80px; padding:1.5rem 3rem; box-sizing: border-box;}
+.contentsArea .list .listArea li a:hover{box-shadow: 5px 5px 6px rgb(0 0 0 / 33%);}
+.contentsArea .list .txtArea a:hover{-ms-transform: translateX(10px); -webkit-transform: translateX(10px); transform: translateX(10px); transition: opacity .3s ease-out, -webkit-transform .3s ease-in-out; transition: opacity .3s ease-out, transform .3s ease-in-out;}
 .contentsArea .tab{display: flex; justify-content: flex-start; margin-bottom:1.5rem;}
 .contentsArea .tab li a{display: inline-block; color: #cdcdcd; font-size: 1.25rem; margin-right: 1.5rem; font-weight: 700;}
 .contentsArea .tab li.on a{color:#0b0b0b;}
 
 .contentsArea .featured{position: relative;}
+.contentsArea .featured .buttonArea li a:hover{background:rgba(255,255,255,0.9); color:#0b0b0b;}
 .contentsArea .featured .dimArea{position:absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.3);}
 .contentsArea .featured img{width:100%; height: 450px; object-fit: cover;}
 .contentsArea .featured .txtWrap{position:absolute; left: 3rem; bottom: 3rem; color: #fff; z-index:2;}
@@ -253,9 +260,10 @@ a{text-decoration: none;}
 .detailArea .featured .realeseYear{display: inline-block; margin-left:10px; color: #888;}
 
 .detailArea .filmInfo{margin-top:1.5rem; display: flex; flex-wrap: wrap;}
+.detailArea .filmInfo a{color:#0b0b0b;}
 .detailArea .filmInfo > div{display: flex; align-items: center; margin-bottom: 1rem; width: 50%;}
 .detailArea .filmInfo > div.noFlex{width:100%; display:block; margin-bottom: 1.25rem;}
-.detailArea .filmInfo h4{font-size: 1rem; margin-right: 15px;}
+.detailArea .filmInfo h4{font-size: 1rem; margin-right: 15px; margin-bottom:0;}
 .detailArea .filmInfo .titleWrap{width:100%; margin-bottom: 1rem;}
 .detailArea .filmInfo .titleWrap{display: flex; justify-content: space-between; align-items: center;}
 .detailArea .filmInfo p{margin-bottom:0;}
@@ -263,5 +271,11 @@ a{text-decoration: none;}
 .detailArea .filmInfo ul li{display: flex; flex-direction: column; }
 .detailArea .filmInfo ul li a{display: inline-block;}
 .detailArea .filmInfo .castsList .imgWrap{width:90px; height:90px; border-radius: 50%; overflow: hidden; margin:0 auto;}
-.detailArea .filmInfo .castsList .imgWrap img{width:100%; height:100%; object-fit: cover;}
+.detailArea .filmInfo .castsList .imgWrap img{width:100%; height:100%; object-fit: cover; filter:gray; -webkit-filter: grayscale(100%); }
+.detailArea .filmInfo .castsList span{display:inline-block; margin-top:0.75rem;}
 
+/* cast page */
+.castArea .castInfo{display: flex; justify-content: space-between; align-items:flex-start;}
+.castArea .castInfo .imgWrap{width:250px; height:250px; border-radius: 50%; overflow: hidden; margin:0 auto;}
+.castArea .castInfo .imgWrap img{width:100%; height:100%; object-fit: cover; filter:gray; -webkit-filter: grayscale(100%); }
+.castArea .castInfo .textArea{width: 75%; margin-left: 5%;}
